@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset=utf-8 />
+  <title>Lab 05 Starter</title>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+
+  <link href="https://api.mapbox.com/mapbox-assembly/v0.24.0/assembly.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" />
+  <link href='css/styles.css' rel='stylesheet' />
+</head>
+
+<body>
+  <div class='flex-parent viewport-full relative scroll-hidden'>
+    <div class='flex-child w-full w300-ml absolute static-ml left bottom'>
+      <div class='flex-parent flex-parent--column viewport-third h-full-ml hmax-full bg-white py18 px12'>
+        <div class='flex-child flex-child--grow px12 py12 scroll-auto'>
+          <h1 class='txt-h1 mb6'>Enrollment by Grade in Kenya </h1>
+          <h1 class = "boys">Blue for Boys</h1> 
+          <h1 class = "girls">Orange for Girls</h1> 
+          <h2 class='txt-xl mt18 mb12'>About This Map</h2>
+          <p> What is the purpose of design? What impression of Kenya And Education will the user reap for this map? Did this need to be an interactive map? For what purposes will this map be used - how can I influence that with my programming skills</p>
+        </div>
+        <footer class='px12 py12 bg-gray-faint txt-s'>
+          <ul>
+            <li>Explore the raw 
+              <a class='link' href='data/kenya_education_2014.csv'>data</a>
+            </li>
+            <li>Map authored by
+              <a class='link' href='https://chiragakunosensei.github.io/chiragakunosensei.gitbhub.io/'>Bradley Gardener</a>
+            </li>
+          </ul>
+        </footer>
+      </div>
+    </div>
+    <div class='flex-child flex-child--grow viewport-twothirds viewport-full-ml'>
+      <div id="map" class='viewport-twothirds viewport-full-ml'></div>
+    </div>
+      
+      <div id='info' class='py6 px12 bg-white border border--gray-light round absolute w240 none'>
+          <div id='info' class='py6 px12 bg-white border border--gray-light round absolute wmax200 none'>
+  <p>County: <span></span></p>
+  <p class='girls'>girls <span></span>: <span class='txt-l txt-bold'></span></p>
+  <p class='boys'>boys <span></span>: <span class='txt-l txt-bold'></span></p>
+  <hr class='txt-hr'>
+  <p class='my6'>trend: grades 1 &ndash; 8</p>
+  <p class='mb6'><span class='girlspark'></span></p>
+  <p><span class='boyspark'></span></p>
+</div>
+</div>
+  </div>
+
+  <!-- ui slider -->
+ <div id='slider' class='range w240 bg-white round-ml px12'>
+  <input type='range' min="1" , max="8" , value="1" , step="1" />
+</div>
+
+  <!-- legend -->
+  <div id='legend' class='bg-white round px12 py12 relative'>
+  <h1 class = "boys">Blue = Boys Enrollment</h1> 
+          <h1 class = "girls">Orange = Girls Enrollment</h1>
+  <div class='legend-circles relative w180'>
+    <div class="legend-large border border--gray-light absolute"></div>
+    <div class="legend-small border border--gray-light absolute"></div>
+    <div class="legend-large-label txt-m absolute"></div>
+    <div class="legend-small-label txt-m absolute"></div>
+  </div>
+      
+<p>County:
+  <span></span>
+</p>
+<p class='girls'>girls
+  <span></span>:
+  <span class='txt-l txt-bold'></span>
+</p>
+<p class='boys'>boys
+  <span></span>:
+  <span class='txt-l txt-bold'></span>
+</p>
+</div>
+
+    <div id='info' class='py6 px12 bg-white border border--gray-light round absolute w240 none'>
+</div>
+
+<div id='info' class='py6 px12 bg-white border border--gray-light round absolute w240'>
+
+  <script async defer src="https://api.mapbox.com/mapbox-assembly/v0.24.0/assembly.js"></script>
+  <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
+  <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.3.1/leaflet-omnivore.min.js'></script>
+  <script src='js/app.js'></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sparklines/2.1.2/jquery.sparkline.min.js"></script>
+
+</body>
+
+</html>
